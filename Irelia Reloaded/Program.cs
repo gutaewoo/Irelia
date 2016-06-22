@@ -328,12 +328,7 @@
             }
             else
             {
-                if (useQ && Q.IsReady() && target.Distance(Player.ServerPosition) > minQRange)
-                {
-                    Q.CastOnUnit(target);
-                }
-
-                if (useW && W.IsReady())
+                if (useW && W.IsReady() && Orbwalker.InAutoAttackRange(target))
                 {
                     W.Cast();
                 }
